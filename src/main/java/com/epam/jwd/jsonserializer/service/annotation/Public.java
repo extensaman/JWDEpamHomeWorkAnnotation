@@ -1,4 +1,4 @@
-package com.epam.jwd.jsonserializer;
+package com.epam.jwd.jsonserializer.service.annotation;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

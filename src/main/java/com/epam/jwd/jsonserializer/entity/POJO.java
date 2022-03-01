@@ -1,6 +1,8 @@
-package com.epam.jwd.jsonserializer;
+package com.epam.jwd.jsonserializer.entity;
 
-import java.util.Arrays;
+import com.epam.jwd.jsonserializer.service.annotation.Public;
+
+import java.util.Date;
 import java.util.Map;
 
 public class POJO {
@@ -14,13 +16,16 @@ public class POJO {
     private double aDouble;
     @Public
     private Map<Integer, String> map;
+    @Public
+    private Date date;
 
-    public POJO(int value, String text, int[] array, double aDouble, Map<Integer, String> map) {
+    public POJO(int value, String text, int[] array, double aDouble, Map<Integer, String> map, Date date) {
         this.value = value;
         this.text = text;
         this.array = array;
         this.aDouble = aDouble;
         this.map = map;
+        this.date = date;
     }
 
     public int getValue() {
@@ -63,14 +68,11 @@ public class POJO {
         this.map = map;
     }
 
-    @Override
-    public String toString() {
-        return "POJO{" +
-                "value=" + value +
-                ", text='" + text + '\'' +
-                ", array=" + Arrays.toString(array) +
-                ", aDouble=" + aDouble +
-                ", map=" + map +
-                '}';
+    public Date getDate() {
+        return date;
+    }
+
+    public void setDate(Date date) {
+        this.date = date;
     }
 }
